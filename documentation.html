@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="x-icon.jpg">
+  </head>
+  <style>
+    body{
+        padding: 100px;
+        background-color: rgb(255, 255, 255);
+    }
+    p,h1,h3{
+        font-family: 'Lato', sans-serif;
+    }
+  </style>
+  <body>
+    <h1>Simulator Documentation</h1>
+    <h3>Overview</h3>
+    <p>
+      This web application is designed to perform various calculations related
+      to fluid mechanics, such as calculating the average velocity in a pipe
+      using Poiseuille's equation, estimating parameters, calculating Reynolds
+      number, and computing frictional head loss using the Darcy-Weisbach
+      equation. Additionally, the application allows for saving and loading of
+      parameters, unit conversion between metric and imperial systems, and
+      selection between different fluid mechanics models.
+    </p>
+
+    <h3>Functionalities</h3>
+    <p>
+      1. Save Webpage Content Functionality: Save the entire content of the
+      webpage to a file. Code: saveFile() Usage: This function captures the
+      entire HTML content of the webpage and saves it as a .balls file.
+    </p>
+    <p>
+      2. Unit Conversion Functionality: Toggle between metric and imperial
+      units. Code: toggleUnits(), setUnits(), setMetricValues(),
+      convertToImperial() Usage: Converts input fields and unit labels between
+      metric and imperial units based on the selected unit system.
+    </p>
+    <p>
+      3. Form Selection Based on Pipe Type Functionality: Display specific forms
+      based on selected pipe type. Code: Event listener for #type-dropdown
+      Usage: Shows/hides forms for circular, square, or channel pipe types.
+    </p>
+    <p>
+      4. Model Form Selection Functionality: Display specific forms based on
+      selected fluid mechanics model. Code: Event listener for #model-option
+      Usage: Shows/hides forms for Darcy-Weisbach or Bernoulli model
+      calculations.
+    </p>
+    <p>
+      5. Save and Load Parameters Functionality: Save current input parameters
+      to a file and load them back. Code: saveParametersToFile(),
+      loadParametersFromFile() Usage: Stores input parameters in a .txt file and
+      reloads them as needed.
+    </p>
+    <p>
+      6. Average Velocity Calculation Functionality: Calculate average velocity
+      using Poiseuille's equation. Code: Event listener for #calculate-vavg
+      Usage: Computes the average velocity based on pressure difference, pipe
+      diameter, fluid viscosity, and pipe length.
+    </p>
+    <p>
+      7. Parameter Estimation Functionality: Estimate area and volumetric flow
+      rate based on pipe diameter and average velocity. Code: Event listener for
+      #estimate-parameters Usage: Computes and displays the area and flow rate,
+      and displays additional parameter sections.
+    </p>
+    <p>
+      8. Reynolds Number Calculation Functionality: Calculate Reynolds number
+      and determine flow regime. Code: Event listener for #calculate-btn,
+      calculateTurbulentFrictionFactor() Usage: Computes Reynolds number,
+      identifies flow regime, and calculates friction factor for turbulent flow.
+    </p>
+    <p>
+      9. Frictional Head Loss Calculation Functionality: Calculate frictional
+      head loss using Darcy-Weisbach equation. Code: Event listener for
+      #darcy-btn Usage: Computes head loss based on friction factor, pipe
+      length, fluid velocity, and pipe diameter.
+    </p>
+    <p>
+      10. Bernoulli Equation Calculation Functionality: Calculate unknown
+      parameters using Bernoulli's equation for different cases.
+    </p>
+    <p>
+      Event listeners for Bernoulli form and case selection Usage: Computes
+      unknown values for pressure, velocity, or elevation in Bernoulli's
+      equation.
+    </p>
+
+    <h1>Limitations</h1>
+    <h3>Transitional Flow</h3>
+    <p>
+      The application does not handle calculations for the transitional flow
+      regime (Reynolds number between 2300 and 4000). An alert is shown to the
+      user indicating the complexity.
+    </p>
+    <h3>Friction Factor Calculation</h3>
+    <p>
+      For turbulent flow, the friction factor calculation using the Colebrook
+      equation may not converge within the set number of iterations. If
+      convergence fails, an alert is shown
+    </p>
+    <h3>Input Validation</h3>
+    <p>
+      The application performs basic input validation, checking for negative or
+      empty values. More comprehensive validation may be needed for specific use
+      cases
+    </p>
+    <h3>Unit Conversion Assumptions</h3>
+    <p>
+      Assumes standard unit conversion factors. Users need to ensure input
+      values are appropriate for the selected unit system.
+    </p>
+    <h3>Hardcoded Constants</h3>
+    <p>
+      Some constants, like gravitational acceleration (9.81 m/s²), are hardcoded
+      and may need adjustments based on specific requirements.
+    </p>
+    <h3>Form Dependency</h3>
+    <p>
+      Some calculations depend on prior inputs from other forms (e.g., Reynolds
+      number calculation requires inputs from the average velocity form).
+    </p>
+    <h1>Usage Instructions</h1>
+    <h3>Select Pipe Type</h3>
+    <p>
+      Use the dropdown to select the type of pipe (circular, square, channel).
+    </p>
+    <h3>Select Model</h3>
+    <p>
+      Use the dropdown to select the fluid mechanics model (Darcy-Weisbach,
+      Bernoulli)
+    </p>
+    <h3>Fill Input Fields</h3>
+    <p>Enter the required values in the respective fields.</p>
+    <h3>Calculate Average Velocity</h3>
+    <p>
+      Click the "Calculate Average Velocity" button to calculate the average
+      velocity.
+    </p>
+    <h3>Estimate Parameters</h3>
+    <p>Click the "Estimate Parameters" button to compute area and flow rate.</p>
+    <h3>Calculate Reynolds Number</h3>
+    <p>
+      Click the "Calculate Reynolds Number" button to compute the Reynolds
+      number and flow regime.
+    </p>
+    <h3>Calculate Head Loss</h3>
+    <p>
+      Click the "Calculate Head Loss" button to compute the frictional head
+      loss.
+    </p>
+    <h3>Save/Load Parameters</h3>
+    <p>Click the "Save/Load Parameters" button to save/load the parameters.</p>
+    <h3>Toggle Units</h3>
+    <p>Use the unit toggle to switch between metric and imperial units.</p>
+    <h3>Calculate Bernoulli</h3>
+    <p>
+      For Bernoulli's equation, select the case and enter values, then click the
+      "Calculate" button.
+    </p>
+  </body>
+</html>

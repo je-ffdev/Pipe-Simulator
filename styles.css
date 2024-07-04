@@ -1,0 +1,302 @@
+#first-part {
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#second-part {
+  display: none;
+  margin-bottom: 30px;
+  width: 100%;
+  height: auto;
+}
+
+#first-form,
+#model-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+#pipe-option,
+#model-option {
+  width: 80%;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f5f5f5;
+  color: white;
+  padding: 10px 20px;
+  gap: 10px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Styling the menu items */
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  color: black;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Styling the dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f5f5f5;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+  display: none;
+}
+
+/* Styling the dropdown items */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dropdown-item input[type="radio"] {
+  margin-right: 5px; /* Space between the radio button and the label */
+}
+
+.dropdown-item label {
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.case-radio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px; /* Optional: Add some padding for better appearance */
+}
+
+.case-radio label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Add some spacing between options */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.case-radio input[type="radio"] {
+  margin-right: 5px; /* Space between the radio button and the text */
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  color: gray;
+}
+
+.dropdown-item:active {
+  color: palevioletred;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+#vavg-form {
+  display: none;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#parameters-1,
+#parameters-2 {
+  display: none;
+}
+
+#circular-form {
+  display: none;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+#darcy-form {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#bernoulli-form {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#square-form {
+  display: none;
+}
+
+#channel-form {
+  display: none;
+}
+
+label {
+  display: block;
+}
+
+#nre {
+  margin-top: 20px;
+  display: block;
+}
+
+#reynolds-number-output,
+#vavg-output,
+#friction-factor-output {
+  display: block;
+  padding: 10px;
+}
+
+#calculate-btn,
+#calculate-vavg,
+#darcy-btn,
+#estimate-parameters,
+#estimate-parameters2,
+#bernoulli-calculate {
+  background-color: rgb(30, 118, 168);
+  margin-top: 10px;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  color: white;
+  width: 200px;
+}
+
+#calculate-btn:hover,
+#calculate-vavg:hover,
+#darcy-btn:hover,
+#estimate-parameters:hover,
+#estimate-parameters2:hover,
+#bernoulli-calculate:hover {
+  background-color: rgb(113, 148, 189);
+}
+
+.hidden {
+  display: none;
+}
+
+label,
+legend {
+  font-weight: bold;
+  padding: 12px;
+}
+input {
+  background-color: #adadad;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  border-radius: 2px;
+  width: 95%;
+}
+
+select {
+  padding: 15px;
+  border-radius: 6px;
+  margin-left: 15px;
+}
+
+option {
+  font-size: 12px;
+  padding: 25px;
+  font-weight: bold;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use min-height to ensure body expands with content */
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #d7d7d7;
+  position: relative;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  padding-bottom: 10px;
+}
+
+.footer-content svg{
+  width: 25px;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.footer-content svg:hover {
+  cursor: pointer;
+  
+}
