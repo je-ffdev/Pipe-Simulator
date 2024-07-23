@@ -318,8 +318,6 @@ document.getElementById('calculate-vavg').addEventListener('click', function () 
 });
 
 
-
-
 document.getElementById('estimate-parameters').addEventListener('click', function () {
     // Get input values
     const D = parseFloat(document.getElementById('vpipe-diameter').value);
@@ -605,9 +603,6 @@ document.getElementById('bernoulli-calculate').addEventListener('click', functio
 });
 
 
-
-
-
 document.getElementById('bernoulli-calculate').addEventListener('click', function () {
     var selectedCase = document.querySelector('input[name="case"]:checked').value;
 
@@ -689,9 +684,6 @@ document.getElementById('bernoulli-calculate').addEventListener('click', functio
         document.getElementById('bernoulli-output').textContent = `${unknown} = ${result}`;
     }
 });
-
-
-
 
 // Handle exit button
 document.getElementById('exit-button').addEventListener('click', function () {
